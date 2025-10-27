@@ -43,7 +43,7 @@ Project ini merupakan simulasi CRUD untuk sistem manajemen konten Dapur Buzzer, 
 
 ```bash
 # Clone repository
-git clone [repository-url]
+git clone https://github.com/MuhamadRafliRabani/dapur_buzzer.git
 
 # Masuk ke directory frontend
 cd frontend
@@ -54,3 +54,38 @@ npm install
 # Jalankan development server
 npm run dev
 ```
+
+# Backend (Laravel)
+
+# Clone repository
+
+git clone https://github.com/MuhamadRafliRabani/backend_dapur_buzzer.git
+
+# Install dependencies
+
+composer install
+
+# Copy environment file
+
+cp .env.example .env
+
+# Generate application key
+
+php artisan key:generate
+
+# Configure database di .env
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=dapur_buzzer
+DB_USERNAME=root
+DB_PASSWORD=
+
+# Jalankan migrations
+
+php artisan migrate
+
+# Jalankan server
+
+php artisan serve
