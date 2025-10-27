@@ -1,3 +1,4 @@
+"use client";
 import CategoryComp from "@/components/categories-comp";
 import AppLayout from "@/components/layout/app-layout";
 

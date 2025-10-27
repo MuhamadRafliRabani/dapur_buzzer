@@ -1,4 +1,3 @@
-"use client";
 import Card from "@/components/ui/card";
 import { influencer } from "@/data/influencer";
 import { api } from "@/lib/api";
@@ -9,6 +8,7 @@ import { useEffect, useState } from "react";
 const CategoryComp = () => {
   const [data, setData] = useState<CategoryType>();
   const searchParams = useSearchParams();
+  console.log("🚀 ~ CategoryComp ~ searchParams:", searchParams);
   const id = searchParams.get("id");
 
   const influencerPerson = influencer.filter((item, i) =>
