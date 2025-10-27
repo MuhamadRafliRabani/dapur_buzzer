@@ -1,6 +1,7 @@
-// /lib/icons.ts
 import * as LucideIcons from "lucide-react";
+import { LucideIcon } from "lucide-react";
 
-export function getIconByName(name: string) {
-  return (LucideIcons as any)[name] || LucideIcons.HelpCircle;
+export function getIconByName(name: string): LucideIcon {
+  const Icon = (LucideIcons as unknown as Record<string, LucideIcon>)[name];
+  return Icon || LucideIcons.HelpCircle;
 }
