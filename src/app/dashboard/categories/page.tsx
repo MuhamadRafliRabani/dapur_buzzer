@@ -114,7 +114,7 @@ const CategoriesPage = () => {
             </thead>
             <tbody className="w-full">
               {filtered.map((item) => {
-                const Icon = getIconByName(item.icon);
+                const Icon = getIconByName(item.icon ?? "");
                 return (
                   <tr
                     key={item.id}

@@ -3,7 +3,6 @@ import AppLayout from "@/components/layout/app-layout";
 import Card from "@/components/ui/card";
 import { influencer } from "@/data/influencer";
 import { api } from "@/lib/api";
-import { slug } from "@/lib/slug";
 import { CategoryType } from "@/type";
 import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";

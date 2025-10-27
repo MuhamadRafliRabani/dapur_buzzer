@@ -62,7 +62,7 @@ const Category = () => {
 
               {!loading &&
                 group.map((item, i) => {
-                  const Icon = getIconByName(item.icon);
+                  const Icon = getIconByName(item.icon ?? "");
                   return (
                     <div key={i}>
                       <Link
