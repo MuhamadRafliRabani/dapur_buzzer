@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "sonner";
+import { ReactNode } from "react";
 
 const montserratSans = Montserrat({
   variable: "--font-montserrat-sans",
@@ -16,7 +17,7 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.JSX.Element;
+  children: ReactNode;
 }>) {
   return (
     <html lang="en">
