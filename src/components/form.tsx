@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { FormEvent, useEffect, useState } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -49,7 +49,7 @@ export default function CategoryForm({ user, onSuccess }: CategoryFormProps) {
     }
   }, [mode, id, toast]);
 
-  const handleSubmit = async (e: any) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
@@ -67,6 +67,7 @@ export default function CategoryForm({ user, onSuccess }: CategoryFormProps) {
         `Category ${mode === "add" ? "created" : "updated"} successfully`
       );
       onSuccess && onSuccess();
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
     } catch (error: any) {
       toast.error(error.response?.data?.message || "Operation failed");
     } finally {
