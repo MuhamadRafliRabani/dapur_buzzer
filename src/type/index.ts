@@ -38,7 +38,7 @@ export interface MCType {
 export interface CategoryType extends responseApi {
   name: string;
   link: string;
-  icon: string;
+  icon?: string;
 }
 
 export interface InfluencerType {
